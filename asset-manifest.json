@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/prince-mercado/static/css/main.2e08b87a.chunk.css",
+    "main.js": "/prince-mercado/static/js/main.e82fe21d.chunk.js",
+    "runtime-main.js": "/prince-mercado/static/js/runtime-main.fae98602.js",
+    "static/css/2.d4ff16e3.chunk.css": "/prince-mercado/static/css/2.d4ff16e3.chunk.css",
+    "static/js/2.b0802327.chunk.js": "/prince-mercado/static/js/2.b0802327.chunk.js",
+    "index.html": "/prince-mercado/index.html",
+    "precache-manifest.5f7c6c513c29303def9adf2e4c87a1ad.js": "/prince-mercado/precache-manifest.5f7c6c513c29303def9adf2e4c87a1ad.js",
+    "service-worker.js": "/prince-mercado/service-worker.js",
+    "static/js/2.b0802327.chunk.js.LICENSE": "/prince-mercado/static/js/2.b0802327.chunk.js.LICENSE",
+    "static/media/hourglass.png": "/prince-mercado/static/media/hourglass.4fa977f9.png",
+    "static/media/peoples.png": "/prince-mercado/static/media/peoples.8b427c54.png",
+    "static/media/reset-password-icon.jpg": "/prince-mercado/static/media/reset-password-icon.41517f0e.jpg",
+    "static/media/sanpablo.png": "/prince-mercado/static/media/sanpablo.658c141c.png",
+    "static/media/tricycle.png": "/prince-mercado/static/media/tricycle.d7bf20e6.png",
+    "static/media/trophy.png": "/prince-mercado/static/media/trophy.a6513e6b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fae98602.js",
+    "static/css/2.d4ff16e3.chunk.css",
+    "static/js/2.b0802327.chunk.js",
+    "static/css/main.2e08b87a.chunk.css",
+    "static/js/main.e82fe21d.chunk.js"
+  ]
+}
