@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/prince-mercado/precache-manifest.addd6bb9adb4f7c7ad1ed6e15e55eb90.js"
+  "/prince-mercado/precache-manifest.00d88362a347df5086148a36e322db30.js"
 );
 
 self.addEventListener('message', (event) => {
