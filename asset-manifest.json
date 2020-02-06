@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/prince-mercado/static/css/main.2e08b87a.chunk.css",
-    "main.js": "/prince-mercado/static/js/main.2c4d7e34.chunk.js",
+    "main.js": "/prince-mercado/static/js/main.7de2dd28.chunk.js",
     "runtime-main.js": "/prince-mercado/static/js/runtime-main.fae98602.js",
     "static/css/2.d4ff16e3.chunk.css": "/prince-mercado/static/css/2.d4ff16e3.chunk.css",
     "static/js/2.b0802327.chunk.js": "/prince-mercado/static/js/2.b0802327.chunk.js",
     "index.html": "/prince-mercado/index.html",
-    "precache-manifest.40c3d821fbbf4346378c392faed526a7.js": "/prince-mercado/precache-manifest.40c3d821fbbf4346378c392faed526a7.js",
+    "precache-manifest.12626a20820167d1ec3225db89a5ac86.js": "/prince-mercado/precache-manifest.12626a20820167d1ec3225db89a5ac86.js",
     "service-worker.js": "/prince-mercado/service-worker.js",
     "static/js/2.b0802327.chunk.js.LICENSE": "/prince-mercado/static/js/2.b0802327.chunk.js.LICENSE",
     "static/media/hourglass.png": "/prince-mercado/static/media/hourglass.4fa977f9.png",
@@ -21,6 +21,6 @@
     "static/css/2.d4ff16e3.chunk.css",
     "static/js/2.b0802327.chunk.js",
     "static/css/main.2e08b87a.chunk.css",
-    "static/js/main.2c4d7e34.chunk.js"
+    "static/js/main.7de2dd28.chunk.js"
   ]
 }
