@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "909978474d3d0f2fd247716a5d940dd9",
+    "revision": "4c0d910dde249c66e7b209dd38c47b56",
     "url": "/prince-mercado/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/prince-mercado/static/css/2.697b9444.chunk.css"
   },
   {
-    "revision": "f6f65b91bebf566e6c4d",
-    "url": "/prince-mercado/static/css/main.dd48079f.chunk.css"
+    "revision": "2f5135fdc21450c36289",
+    "url": "/prince-mercado/static/css/main.956b3448.chunk.css"
   },
   {
     "revision": "0a5fd1067d20930cd985",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/prince-mercado/static/js/2.22268562.chunk.js.LICENSE"
   },
   {
-    "revision": "f6f65b91bebf566e6c4d",
-    "url": "/prince-mercado/static/js/main.c1b15b92.chunk.js"
+    "revision": "2f5135fdc21450c36289",
+    "url": "/prince-mercado/static/js/main.7744bf8e.chunk.js"
   },
   {
     "revision": "0be045535255bd485a1a",
