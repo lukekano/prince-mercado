@@ -27,7 +27,13 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     maxHeight: 300,
     margin: "3rem auto",
+    background: "#939592",
+    color: "#fff",
+    textAlign: "center"
   },
+  cardAction: {
+    background: "#3873B1",
+  }
 }));
 
 const projects = [
@@ -77,7 +83,7 @@ const projects = [
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
-  img: project6,
+    img: project6,
   },
 ];
 
@@ -85,8 +91,8 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
-      <TitlebarGridList tileData={projects}/>
-      {/* <Grid container justify="center">
+      {/* <TitlebarGridList tileData={projects}/> */}
+      <Grid container justify="center">
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
             <Card className={classes.cardContainer}>
@@ -94,31 +100,35 @@ const Portfolio = () => {
                 <CardMedia
                   component="img"
                   alt="Project 1"
-                  height="140"
-                  image={project.image}
-                  style={{objectFit: "fill"}}
+                  height="200"
+                  image={project.img}
+                  style={{ objectFit: "fill" }}
                 />
-                <CardContent>
+                <CardContent height="150">
                   <Typography variant="h5" gutterBottom>
-                    {project.name}
+                    {project.title}
                   </Typography>
-                  <Typography noWrap={true} variant="body2" color="textSecondary">
-                    {project.description}
-                  </Typography>
+                  {/* <Typography
+                    noWrap={true}
+                    variant="body2"
+                    color="textSecondary"
+                  >
+                    {project.author}
+                  </Typography> */}
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
+              {/* <CardActions className={classes.cardAction}>
+                <Button size="small" color="light">
                   Share
                 </Button>
                 <Button size="small" color="primary">
                   Live Demo
                 </Button>
-              </CardActions>
+              </CardActions> */}
             </Card>
           </Grid>
         ))}
-      </Grid> */}
+      </Grid>
     </Box>
   );
 };

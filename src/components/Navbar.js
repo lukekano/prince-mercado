@@ -20,6 +20,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import DashboardIcon from "@material-ui/icons/Dashboard";
+import Typography from "@material-ui/core/Typography";
 
 import Footer from "../components/Footer";
 
@@ -27,14 +28,14 @@ import Slide from "@material-ui/core/Slide";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    background: "#252327",
+    background: "#3873B1",
     margin: 0,
   },
   menu: {
-    color: "#ddd",
+    color: "#fff",
   },
   title: {
-    color: "tan",
+    color: "#ddd",
   },
   menuSliderContainer: {
     width: 250,
@@ -134,6 +135,9 @@ const Navbar = (props) => {
               <IconButton onClick={() => setOpen(true)}>
                 <MenuIcon className={classes.menu} />
               </IconButton>
+              {/* <Typography variant="h5" className={classes.title}>
+                {menuItems[selectedIndex].listText}
+              </Typography> */}
             </Toolbar>
           </AppBar>
         </HideOnScroll>

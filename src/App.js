@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./components";
 import Resume from "./components/Resume";
@@ -26,22 +26,24 @@ const theme = createMuiTheme({
 function App(props) {
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Navbar />
-      <Toolbar id="back-to-top-anchor" />
-      <Switch>
+      <HashRouter>
+        <CssBaseline />
+        <Navbar />
+        <Toolbar id="back-to-top-anchor" />
+
         <Route exact path="/" component={Home} />
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
-      </Switch>
-      <ScrollTop {...props}>
-        <ThemeProvider theme={theme}>
-          <Fab color="primary" size="small" aria-label="scroll back to top">
-            <KeyboardArrowUpIcon />
-          </Fab>
-        </ThemeProvider>
-      </ScrollTop>
+
+        <ScrollTop {...props}>
+          <ThemeProvider theme={theme}>
+            <Fab color="primary" size="small" aria-label="scroll back to top">
+              <KeyboardArrowUpIcon />
+            </Fab>
+          </ThemeProvider>
+        </ScrollTop>
+      </HashRouter>
     </React.Fragment>
   );
 }
