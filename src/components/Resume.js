@@ -178,7 +178,7 @@ const Resume = () => {
             align="center"
             className={classes.subHeading}
           >
-            Sofware Developer
+            Software Developer
           </Typography>
           <Typography variant="body1" align="center" className={classes.body1}>
             Amdocs Philippines
