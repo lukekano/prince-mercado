@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Drawer from "@material-ui/core/Drawer";
 import Box from "@material-ui/core/Box";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -11,59 +11,98 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
-import ArrowBack from "@material-ui/icons/ArrowBack";
-import AssignmentInd from "@material-ui/icons/AssignmentInd";
+import WorkIcon from "@material-ui/icons/Work";
 import Home from "@material-ui/icons/Home";
-import Apps from "@material-ui/icons/Apps";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
+import MenuIcon from "@material-ui/icons/Menu";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
+import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+import DashboardIcon from "@material-ui/icons/Dashboard";
 
 import Footer from "../components/Footer";
 
+import Slide from "@material-ui/core/Slide";
+
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    background: "#222",
+    background: "#252327",
     margin: 0,
   },
-  arrow: {
-    color: "tomato",
+  menu: {
+    color: "#ddd",
   },
   title: {
     color: "tan",
   },
   menuSliderContainer: {
     width: 250,
-    background: "#511",
+    background: "#252327",
     height: "100%",
   },
   avatar: {
     display: "block",
-    margin: "0.5rem auto",
+    margin: "2rem auto",
     width: theme.spacing(13),
     height: theme.spacing(13),
+    background: "#939592",
   },
   listItem: {
-    color: "tan",
+    color: "#ddd",
   },
 }));
 
 const menuItems = [
   { listIcon: <Home />, listText: "Home", listPath: "/" },
-  { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <WorkIcon />, listText: "Resume", listPath: "/resume" },
+  {
+    listIcon: <DashboardIcon />,
+    listText: "Portfolio",
+    listPath: "/portfolio",
+  },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 ];
 
-const Navbar = () => {
+function HideOnScroll(props) {
+  const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+HideOnScroll.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+const Navbar = (props) => {
   const [open, setOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const classes = useStyles();
 
+  const handleDrawerItemClick = (event, index) => {
+    setSelectedIndex(index);
+    setTimeout(() => {
+      setOpen(false);
+    }, 200);
+  };
+
   const sideList = () => (
     <Box className={classes.menuSliderContainer} component="div">
-      <Avatar className={classes.avatar} src={avatar} alt="Mahmudul Alam" />
+      <Avatar className={classes.avatar} src={avatar} alt="Prince Mercado" />
       <Divider />
       <List>
         {menuItems.map((item, i) => (
@@ -71,7 +110,8 @@ const Navbar = () => {
             button
             key={i}
             className={classes.listItem}
-            onClick={() => setOpen(false)}
+            onClick={(event) => handleDrawerItemClick(event, i)}
+            selected={selectedIndex === i}
             component={Link}
             to={item.listPath}
           >
@@ -88,21 +128,26 @@ const Navbar = () => {
   return (
     <React.Fragment>
       <Box component="nav">
-        <AppBar position="static" className={classes.appbar}>
-          <Toolbar>
-            <IconButton onClick={() => setOpen(true)}>
-              <ArrowBack className={classes.arrow} />
-            </IconButton>
-            <Typography variant="h5" className={classes.title}>
-              Portfolio
-            </Typography>
-          </Toolbar>
-        </AppBar>
+        <HideOnScroll {...props}>
+          <AppBar position="fixed" className={classes.appbar}>
+            <Toolbar>
+              <IconButton onClick={() => setOpen(true)}>
+                <MenuIcon className={classes.menu} />
+              </IconButton>
+            </Toolbar>
+          </AppBar>
+        </HideOnScroll>
       </Box>
-      <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
+      <SwipeableDrawer
+        onOpen={() => setOpen(true)}
+        disableBackdropTransition={true}
+        open={open}
+        anchor="left"
+        onClose={() => setOpen(false)}
+      >
         {sideList()}
         <Footer />
-      </Drawer>
+      </SwipeableDrawer>
     </React.Fragment>
   );
 };

@@ -10,72 +10,74 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import project1 from "../images/html-css-javascript-lg.jpg";
-import project2 from "../images/html-css-javascript.jpg";
-import project3 from "../images/javascript-fullstack.jpg";
-import project4 from "../images/mern-stack.jpg";
-import project5 from "../images/react-redux.jpg";
+import project1 from "../images/gps-dashboard.jpg";
+import project2 from "../images/dltb-selectseat.png";
+import project3 from "../images/ctmo-dashboard.png";
+import project4 from "../images/ctmo-app-home2.png";
+import project5 from "../images/remote-home.png";
 import project6 from "../images/react.png";
+import TitlebarGridList from "./TitleBarGridList";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
-    background: "#233",
+    background: "#212129",
     height: "100%",
   },
   cardContainer: {
     maxWidth: 345,
+    maxHeight: 300,
     margin: "3rem auto",
   },
 }));
 
 const projects = [
   {
-    name: "Project 1",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+    title: "Vehicle Tracking App",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
     consequatur magni quod nesciunt necessitatibus molestiae non
     eligendi, magnam est aliquam recusandae? Magnam soluta minus
     iste alias sunt veritatis nisi dolores!`,
-    image: project1,
+    img: project1,
   },
   {
-    name: "Project 2",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    title: "Bus Booking App",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
-    image: project2,
+    img: project2,
   },
   {
-    name: "Project 3",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    title: "Tricycle Complaint Management App",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
-    image: project3,
+    img: project3,
   },
   {
-    name: "Project 4",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    title: "Tricycle Complaint Android App",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
-    image: project4,
+    img: project4,
   },
   {
-    name: "Project 5",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    title: "Remote TimeKeeping App",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
-    image: project5,
+    img: project5,
   },
   {
-    name: "Project 6",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    title: "Project 6",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
-    image: project6,
+  img: project6,
   },
 ];
 
@@ -83,8 +85,8 @@ const Portfolio = () => {
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>
-      <Grid container justify="center">
-        {/* Projects */}
+      <TitlebarGridList tileData={projects}/>
+      {/* <Grid container justify="center">
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
             <Card className={classes.cardContainer}>
@@ -94,12 +96,13 @@ const Portfolio = () => {
                   alt="Project 1"
                   height="140"
                   image={project.image}
+                  style={{objectFit: "fill"}}
                 />
                 <CardContent>
                   <Typography variant="h5" gutterBottom>
                     {project.name}
                   </Typography>
-                  <Typography variant="body2" color="textSecondary">
+                  <Typography noWrap={true} variant="body2" color="textSecondary">
                     {project.description}
                   </Typography>
                 </CardContent>
@@ -115,7 +118,7 @@ const Portfolio = () => {
             </Card>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Box>
   );
 };
