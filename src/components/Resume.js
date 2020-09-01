@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   timeLine: {
     position: "relative",
     padding: "1rem",
-    margin: "o auto",
+    margin: "0 auto",
     "&:before": {
       content: "''",
       position: "absolute",

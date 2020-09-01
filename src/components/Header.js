@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
@@ -9,16 +9,16 @@ import avatar from "../avatar.png";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
-    width: theme.spacing(15),
-    height: theme.spacing(15),
+    width: theme.spacing(20),
+    height: theme.spacing(20),
     margin: theme.spacing(1),
-    background: "#939592"
+    background: "#939592",
   },
   title: {
     color: "#fff",
   },
   subtitle: {
-    color: "#ddd",
+    color: "#eee",
     textTransform: "uppercase",
   },
   typedContainer: {
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+  const [titleComplete, setTitleComplete] = useState(false);
   const classes = useStyles();
 
   return (
@@ -41,20 +42,38 @@ const Header = () => {
         <Avatar className={classes.avatar} src={avatar} alt="Prince Mercado" />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["Prince Mercado"]} typeSpeed={40} />
+        <Typed
+          strings={["Hi, I'm Prince Mercado"]}
+          typeSpeed={100}
+          showCursor={false}
+          onComplete={() => setTitleComplete(true)}
+        />
       </Typography>
 
       <Typography className={classes.subtitle} variant="h5">
-        <Typed
-          strings={[
-            "Frontend Developer",
-            "Backend Developer",
-            "Mobile App Developer",
-          ]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-        />
+        {titleComplete ? (
+          <Typed
+            strings={[
+              "Frontend Developer",
+              "Backend Developer",
+              "Mobile App Developer",
+            ]}
+            typeSpeed={60}
+            backSpeed={50}
+            loop
+            showCursor={true}
+          />
+        ) : (
+          <Typed
+            strings={[
+              "Frontend Developer",
+            ]}
+            typeSpeed={40}
+            backSpeed={50}
+            style={{color: "transparent"}}
+            stopped
+          />
+        )}
       </Typography>
     </Box>
   );

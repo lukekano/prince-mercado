@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, HashRouter } from "react-router-dom";
+import { Route, Switch, HashRouter, Redirect } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Home from "./components";
 import Resume from "./components/Resume";
@@ -15,17 +15,26 @@ import { ThemeProvider } from "@material-ui/styles";
 
 import "./App.css";
 
+const font = "Titillium Web, sans-serif";
+
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: font,
+    button: {
+      textTransform: "none"
+    }
+  },
   palette: {
     primary: {
       main: "#3873B1",
     },
-  },
+  }
 });
 
 function App(props) {
   return (
     <React.Fragment>
+      <ThemeProvider theme={theme}>
       <HashRouter>
         <CssBaseline />
         <Navbar />
@@ -35,15 +44,16 @@ function App(props) {
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
+        <Route path="*" render={() => <Redirect to="/" />} />
 
         <ScrollTop {...props}>
-          <ThemeProvider theme={theme}>
+          
             <Fab color="primary" size="small" aria-label="scroll back to top">
               <KeyboardArrowUpIcon />
             </Fab>
-          </ThemeProvider>
         </ScrollTop>
       </HashRouter>
+      </ThemeProvider>
     </React.Fragment>
   );
 }

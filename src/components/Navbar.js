@@ -17,6 +17,7 @@ import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 import MenuIcon from "@material-ui/icons/Menu";
+import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import DashboardIcon from "@material-ui/icons/Dashboard";
@@ -28,7 +29,7 @@ import Slide from "@material-ui/core/Slide";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
-    background: "#3873B1",
+    background: "3873B1",
     margin: 0,
   },
   menu: {
@@ -70,7 +71,9 @@ function HideOnScroll(props) {
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
-  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+  const trigger = useScrollTrigger({
+    target: window ? window() : undefined,
+  });
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
@@ -130,10 +133,17 @@ const Navbar = (props) => {
     <React.Fragment>
       <Box component="nav">
         <HideOnScroll {...props}>
-          <AppBar position="fixed" className={classes.appbar}>
+          <AppBar
+            position="fixed"
+            className={classes.appbar}
+            style={{
+              background: selectedIndex == 0 ? "transparent" : "#3873B1",
+            }}
+            elevation={selectedIndex == 0 ? 0 : 1}
+          >
             <Toolbar>
               <IconButton onClick={() => setOpen(true)}>
-                <MenuIcon className={classes.menu} />
+                <MenuRoundedIcon className={classes.menu} />
               </IconButton>
               {/* <Typography variant="h5" className={classes.title}>
                 {menuItems[selectedIndex].listText}

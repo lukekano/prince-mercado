@@ -54,7 +54,7 @@ const projects = [
     img: project2,
   },
   {
-    title: "Tricycle Complaint Management App",
+    title: "Complaint Management App",
     author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
@@ -62,7 +62,7 @@ const projects = [
     img: project3,
   },
   {
-    title: "Tricycle Complaint Android App",
+    title: "Tricycle Complaint App",
     author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
@@ -77,14 +77,14 @@ const projects = [
     iste alias sunt veritatis nisi dolores!`,
     img: project5,
   },
-  {
-    title: "Project 6",
-    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    img: project6,
-  },
+  // {
+  //   title: "Face Recognition App",
+  //   author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+  //   consequatur magni quod nesciunt necessitatibus molestiae non\
+  //   eligendi, magnam est aliquam recusandae? Magnam soluta minus\
+  //   iste alias sunt veritatis nisi dolores!`,
+  //   img: project6,
+  // },
 ];
 
 const Portfolio = () => {
@@ -92,7 +92,7 @@ const Portfolio = () => {
   return (
     <Box component="div" className={classes.mainContainer}>
       {/* <TitlebarGridList tileData={projects}/> */}
-      <Grid container justify="center">
+      <Grid container justify="left">
         {projects.map((project, i) => (
           <Grid item xs={12} sm={8} md={4} key={i}>
             <Card className={classes.cardContainer}>
