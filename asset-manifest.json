@@ -1,16 +1,12 @@
 {
   "files": {
-    "main.css": "/prince-mercado/static/css/main.03e552b4.chunk.css",
+    "main.css": "/prince-mercado/static/css/main.57fab22b.chunk.css",
     "main.js": "/prince-mercado/static/js/main.07448c95.chunk.js",
-    "main.js.map": "/prince-mercado/static/js/main.07448c95.chunk.js.map",
     "runtime-main.js": "/prince-mercado/static/js/runtime-main.fa8468e0.js",
-    "runtime-main.js.map": "/prince-mercado/static/js/runtime-main.fa8468e0.js.map",
     "static/js/2.ac91cb95.chunk.js": "/prince-mercado/static/js/2.ac91cb95.chunk.js",
-    "static/js/2.ac91cb95.chunk.js.map": "/prince-mercado/static/js/2.ac91cb95.chunk.js.map",
     "index.html": "/prince-mercado/index.html",
-    "precache-manifest.d059a8f6621bcccfb021b2519bc41add.js": "/prince-mercado/precache-manifest.d059a8f6621bcccfb021b2519bc41add.js",
+    "precache-manifest.ee8c88989e4b5ff44836e04e7414504d.js": "/prince-mercado/precache-manifest.ee8c88989e4b5ff44836e04e7414504d.js",
     "service-worker.js": "/prince-mercado/service-worker.js",
-    "static/css/main.03e552b4.chunk.css.map": "/prince-mercado/static/css/main.03e552b4.chunk.css.map",
     "static/js/2.ac91cb95.chunk.js.LICENSE.txt": "/prince-mercado/static/js/2.ac91cb95.chunk.js.LICENSE.txt",
     "static/media/avatar.png": "/prince-mercado/static/media/avatar.4f5142ce.png",
     "static/media/App.css": "/prince-mercado/static/media/coding2.1bf79fee.jpg",
@@ -24,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.fa8468e0.js",
     "static/js/2.ac91cb95.chunk.js",
-    "static/css/main.03e552b4.chunk.css",
+    "static/css/main.57fab22b.chunk.css",
     "static/js/main.07448c95.chunk.js"
   ]
 }
