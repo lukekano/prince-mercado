@@ -17,6 +17,7 @@ import project4 from "../images/ctmo-app-home2.png";
 import project5 from "../images/remote-home.png";
 import project6 from "../images/react.png";
 import TitlebarGridList from "./TitleBarGridList";
+import ImageFadeIn from "react-image-fade-in";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -27,13 +28,16 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     maxHeight: 300,
     margin: "3rem auto",
-    background: "#939592",
+    background: "linear-gradient(to top, transparent,  #3873B1)",
     color: "#fff",
-    textAlign: "center"
+    textAlign: "center",
   },
   cardAction: {
     background: "#3873B1",
-  }
+  },
+  cardMedia: {
+    marginTop: 10,
+  },
 }));
 
 const projects = [
@@ -98,12 +102,18 @@ const Portfolio = () => {
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
-                  component="img"
                   alt="Project 1"
+                  className={classes.cardMedia}
                   height="200"
-                  image={project.img}
-                  style={{ objectFit: "fill" }}
-                />
+
+                  // style={{ objectFit: "fill" }}
+                >
+                  <ImageFadeIn
+                    height={150}
+                    src={project.img}
+                    style={{ objectFit: "fill" }}
+                  />
+                </CardMedia>
                 <CardContent height="150">
                   <Typography variant="h5" gutterBottom>
                     {project.title}

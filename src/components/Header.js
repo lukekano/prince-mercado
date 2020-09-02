@@ -6,6 +6,7 @@ import Box from "@material-ui/core/Box";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
+import ImageFadeIn from "react-image-fade-in";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -39,7 +40,11 @@ const Header = () => {
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Prince Mercado" />
+        <Avatar className={classes.avatar} alt="Prince Mercado"><ImageFadeIn
+                    src={avatar}
+                    height={160}
+                    style={{ objectFit: "fill" }}
+                  /></Avatar>
       </Grid>
       <Typography className={classes.title} variant="h4">
         <Typed
