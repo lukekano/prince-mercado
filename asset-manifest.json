@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/prince-mercado/static/css/main.03fc1363.chunk.css",
-    "main.js": "/prince-mercado/static/js/main.c9f768e3.chunk.js",
-    "runtime-main.js": "/prince-mercado/static/js/runtime-main.fa8468e0.js",
-    "static/js/2.da5c7ef3.chunk.js": "/prince-mercado/static/js/2.da5c7ef3.chunk.js",
-    "index.html": "/prince-mercado/index.html",
-    "precache-manifest.fade6dd46ae458ac27bdf45eed05a25e.js": "/prince-mercado/precache-manifest.fade6dd46ae458ac27bdf45eed05a25e.js",
-    "service-worker.js": "/prince-mercado/service-worker.js",
-    "static/js/2.da5c7ef3.chunk.js.LICENSE.txt": "/prince-mercado/static/js/2.da5c7ef3.chunk.js.LICENSE.txt",
-    "static/media/avatar.png": "/prince-mercado/static/media/avatar.4f5142ce.png",
-    "static/media/App.css": "/prince-mercado/static/media/coding2.1bf79fee.jpg",
-    "static/media/ctmo-app-home2.png": "/prince-mercado/static/media/ctmo-app-home2.7b0431ab.png",
-    "static/media/ctmo-dashboard.png": "/prince-mercado/static/media/ctmo-dashboard.9f6597f4.png",
-    "static/media/dltb-selectseat.png": "/prince-mercado/static/media/dltb-selectseat.42f5a611.png",
-    "static/media/gps-dashboard.jpg": "/prince-mercado/static/media/gps-dashboard.a2436c29.jpg",
-    "static/media/react.png": "/prince-mercado/static/media/react.f370c1e0.png",
-    "static/media/remote-home.png": "/prince-mercado/static/media/remote-home.8c43efd0.png"
+    "main.css": "/static/css/main.d5527328.chunk.css",
+    "main.js": "/static/js/main.a27a0d50.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
+    "static/js/2.da5c7ef3.chunk.js": "/static/js/2.da5c7ef3.chunk.js",
+    "index.html": "/index.html",
+    "precache-manifest.1f4b0fa65c5ff04569fdb887e1744b65.js": "/precache-manifest.1f4b0fa65c5ff04569fdb887e1744b65.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.da5c7ef3.chunk.js.LICENSE.txt": "/static/js/2.da5c7ef3.chunk.js.LICENSE.txt",
+    "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
+    "static/media/App.css": "/static/media/coding2.1bf79fee.jpg",
+    "static/media/ctmo-app-home2.png": "/static/media/ctmo-app-home2.7b0431ab.png",
+    "static/media/ctmo-dashboard.png": "/static/media/ctmo-dashboard.9f6597f4.png",
+    "static/media/dltb-selectseat.png": "/static/media/dltb-selectseat.42f5a611.png",
+    "static/media/gps-dashboard.jpg": "/static/media/gps-dashboard.a2436c29.jpg",
+    "static/media/react.png": "/static/media/react.f370c1e0.png",
+    "static/media/remote-home.png": "/static/media/remote-home.8c43efd0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.fa8468e0.js",
+    "static/js/runtime-main.19ccc7f6.js",
     "static/js/2.da5c7ef3.chunk.js",
-    "static/css/main.03fc1363.chunk.css",
-    "static/js/main.c9f768e3.chunk.js"
+    "static/css/main.d5527328.chunk.css",
+    "static/js/main.a27a0d50.chunk.js"
   ]
 }
