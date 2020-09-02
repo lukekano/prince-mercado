@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.d5527328.chunk.css",
-    "main.js": "/static/js/main.a27a0d50.chunk.js",
+    "main.js": "/static/js/main.ad8feb00.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.da5c7ef3.chunk.js": "/static/js/2.da5c7ef3.chunk.js",
+    "static/js/2.a71f6ad1.chunk.js": "/static/js/2.a71f6ad1.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.1f4b0fa65c5ff04569fdb887e1744b65.js": "/precache-manifest.1f4b0fa65c5ff04569fdb887e1744b65.js",
+    "precache-manifest.95ddf9847fe1735029d511f1559caf1b.js": "/precache-manifest.95ddf9847fe1735029d511f1559caf1b.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.da5c7ef3.chunk.js.LICENSE.txt": "/static/js/2.da5c7ef3.chunk.js.LICENSE.txt",
+    "static/js/2.a71f6ad1.chunk.js.LICENSE.txt": "/static/js/2.a71f6ad1.chunk.js.LICENSE.txt",
     "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
     "static/media/App.css": "/static/media/coding2.1bf79fee.jpg",
     "static/media/ctmo-app-home2.png": "/static/media/ctmo-app-home2.7b0431ab.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.da5c7ef3.chunk.js",
+    "static/js/2.a71f6ad1.chunk.js",
     "static/css/main.d5527328.chunk.css",
-    "static/js/main.a27a0d50.chunk.js"
+    "static/js/main.ad8feb00.chunk.js"
   ]
 }
