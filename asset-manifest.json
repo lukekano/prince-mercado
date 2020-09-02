@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.d5527328.chunk.css",
-    "main.js": "/static/js/main.5c6121aa.chunk.js",
+    "main.js": "/static/js/main.80684503.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.406ab808.chunk.js": "/static/js/2.406ab808.chunk.js",
+    "static/js/2.6632df9f.chunk.js": "/static/js/2.6632df9f.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.2b95d46eaa02b0e4629201acaff9845f.js": "/precache-manifest.2b95d46eaa02b0e4629201acaff9845f.js",
+    "precache-manifest.3d174c549137c1d4b1f2a61d4758e77a.js": "/precache-manifest.3d174c549137c1d4b1f2a61d4758e77a.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.406ab808.chunk.js.LICENSE.txt": "/static/js/2.406ab808.chunk.js.LICENSE.txt",
+    "static/js/2.6632df9f.chunk.js.LICENSE.txt": "/static/js/2.6632df9f.chunk.js.LICENSE.txt",
     "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
     "static/media/App.css": "/static/media/coding2.1bf79fee.jpg",
     "static/media/ctmo-app-home2.png": "/static/media/ctmo-app-home2.7b0431ab.png",
     "static/media/ctmo-dashboard.png": "/static/media/ctmo-dashboard.9f6597f4.png",
     "static/media/dltb-selectseat.png": "/static/media/dltb-selectseat.42f5a611.png",
+    "static/media/fingerprint-app.png": "/static/media/fingerprint-app.76d32778.png",
     "static/media/gps-dashboard.jpg": "/static/media/gps-dashboard.a2436c29.jpg",
-    "static/media/react.png": "/static/media/react.f370c1e0.png",
     "static/media/remote-home.png": "/static/media/remote-home.8c43efd0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.406ab808.chunk.js",
+    "static/js/2.6632df9f.chunk.js",
     "static/css/main.d5527328.chunk.css",
-    "static/js/main.5c6121aa.chunk.js"
+    "static/js/main.80684503.chunk.js"
   ]
 }
