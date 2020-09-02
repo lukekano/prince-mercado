@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     color: "#3873B1",
     textAlign: "center",
     textTransform: "uppercase",
-    marginBottom: "1rem",
+    margin: "3rem auto",
   },
   form: {
     position: "relative",
@@ -140,7 +140,7 @@ const Contact = () => {
     <Box component="div" className={classes.contactContainer}>
       <Grid container justify="center">
         <Box component="form" className={classes.form} onSubmit={onSubmitForm}>
-          <Typography variant="h5" className={classes.heading}>
+          <Typography variant="h4" className={classes.heading}>
             Hire or Contact me...
           </Typography>
           <InputField
