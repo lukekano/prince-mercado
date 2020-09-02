@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
@@ -7,6 +7,7 @@ import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
 import ImageFadeIn from "react-image-fade-in";
+import { AppDispatchContext } from "../context/AppContext";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -34,8 +35,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
+  const {dispatch} = useContext(AppDispatchContext);
   const [titleComplete, setTitleComplete] = useState(false);
   const classes = useStyles();
+
+  useEffect(() =>{
+    dispatch({type: "navigate", payload: {routeIndex: 0, toolBarTitle: ""}})
+  }, []);
 
   return (
     <Box className={classes.typedContainer}>

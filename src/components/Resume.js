@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
+import { AppDispatchContext } from "../context/AppContext";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -111,6 +112,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Resume = () => {
+  const {dispatch} = useContext(AppDispatchContext);
+  useEffect(() =>{
+    dispatch({type: "navigate", payload: {routeIndex: 1, toolBarTitle: "Resume"}})
+  }, []);
   const classes = useStyles();
   return (
     <Box component="header" className={classes.mainContainer}>

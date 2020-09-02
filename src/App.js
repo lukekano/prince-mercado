@@ -12,8 +12,11 @@ import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import Toolbar from "@material-ui/core/Toolbar";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
+import { AppStateContext, AppDispatchContext } from "./context/AppContext";
 
 import "./App.css";
+
+import { useImmerReducer } from "use-immer";
 
 const font = "Titillium Web, sans-serif";
 
@@ -21,39 +24,63 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: font,
     button: {
-      textTransform: "none"
-    }
+      textTransform: "none",
+    },
   },
   palette: {
     primary: {
       main: "#3873B1",
     },
-  }
+  },
 });
 
+const initialState = {
+  routeIndex: 0,
+  toolBarTitle: "",
+};
+
+function appReducer(draft, action) {
+  switch (action.type) {
+    case "navigate":
+      draft.routeIndex = action.payload.routeIndex;
+      draft.toolBarTitle = action.payload.toolBarTitle;
+      return;
+    default:
+      return;
+  }
+}
+
 function App(props) {
+  const [state, dispatch] = useImmerReducer(appReducer, initialState);
   return (
     <React.Fragment>
-      <ThemeProvider theme={theme}>
-      <HashRouter>
-        <CssBaseline />
-        <Navbar />
-        <Toolbar id="back-to-top-anchor" />
+      <AppStateContext.Provider value={{ state }}>
+        <AppDispatchContext.Provider value={{ dispatch }}>
+          <ThemeProvider theme={theme}>
+            <HashRouter>
+              <CssBaseline />
+              <Navbar />
+              <Toolbar id="back-to-top-anchor" />
 
-        <Route exact path="/" component={Home} />
-        <Route exact path="/resume" component={Resume} />
-        <Route exact path="/portfolio" component={Portfolio} />
-        <Route exact path="/contact" component={Contact} />
-        <Route path="*" render={() => <Redirect to="/" />} />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/resume" component={Resume} />
+              <Route exact path="/portfolio" component={Portfolio} />
+              <Route exact path="/contact" component={Contact} />
+              <Route path="*" render={() => <Redirect to="/" />} />
 
-        <ScrollTop {...props}>
-          
-            <Fab color="primary" size="small" aria-label="scroll back to top">
-              <KeyboardArrowUpIcon />
-            </Fab>
-        </ScrollTop>
-      </HashRouter>
-      </ThemeProvider>
+              <ScrollTop {...props}>
+                <Fab
+                  color="primary"
+                  size="small"
+                  aria-label="scroll back to top"
+                >
+                  <KeyboardArrowUpIcon />
+                </Fab>
+              </ScrollTop>
+            </HashRouter>
+          </ThemeProvider>
+        </AppDispatchContext.Provider>
+      </AppStateContext.Provider>
     </React.Fragment>
   );
 }

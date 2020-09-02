@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import TextField from "@material-ui/core/TextField";
@@ -14,6 +14,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert";
 
 import ReCAPTCHA from "react-google-recaptcha";
+import { AppDispatchContext } from "../context/AppContext";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
@@ -28,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     position: "relative",
-    margin: "1rem"
+    margin: "1rem",
   },
   input: {
     color: "#fff",
@@ -41,10 +42,10 @@ const useStyles = makeStyles((theme) => ({
   field: {
     margin: "1rem 0rem",
   },
-  recaptcha:{
+  recaptcha: {
     marginTop: "1rem",
-    width: "100%"
-  }
+    width: "100%",
+  },
 }));
 
 const InputField = withStyles({
@@ -80,6 +81,13 @@ const Contact = () => {
   const [captchaPassed, setCaptchaPassed] = useState(false);
   const [open, setOpen] = useState(false);
   const recaptchaRef = React.createRef();
+  const { dispatch } = useContext(AppDispatchContext);
+  useEffect(() => {
+    dispatch({
+      type: "navigate",
+      payload: { routeIndex: 3, toolBarTitle: "Contact" },
+    });
+  }, []);
 
   const Alert = (props) => {
     return <MuiAlert elevation={6} variant="filled" {...props} />;

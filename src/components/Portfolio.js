@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -18,6 +18,7 @@ import project5 from "../images/remote-home.png";
 import project6 from "../images/react.png";
 import TitlebarGridList from "./TitleBarGridList";
 import ImageFadeIn from "react-image-fade-in";
+import { AppDispatchContext } from "../context/AppContext";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -92,6 +93,10 @@ const projects = [
 ];
 
 const Portfolio = () => {
+  const {dispatch} = useContext(AppDispatchContext);
+  useEffect(() =>{
+    dispatch({type: "navigate", payload: {routeIndex: 2, toolBarTitle: "Portfolio"}})
+  }, []);
   const classes = useStyles();
   return (
     <Box component="div" className={classes.mainContainer}>

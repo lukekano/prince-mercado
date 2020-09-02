@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Box from "@material-ui/core/Box";
@@ -26,17 +26,22 @@ import Typography from "@material-ui/core/Typography";
 import Footer from "../components/Footer";
 
 import Slide from "@material-ui/core/Slide";
+import { AppStateContext } from "../context/AppContext";
+import ImageFadeIn from "react-image-fade-in";
 
 const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "3873B1",
     margin: 0,
   },
+  grow: {
+    flexGrow: 1,
+  },
   menu: {
     color: "#fff",
   },
   title: {
-    color: "#ddd",
+    color: "#eee",
   },
   menuSliderContainer: {
     width: 250,
@@ -48,6 +53,12 @@ const useStyles = makeStyles((theme) => ({
     margin: "2rem auto",
     width: theme.spacing(13),
     height: theme.spacing(13),
+    background: "#939592",
+  },
+  toolbarAvatar: {
+    display: "block",
+    width: theme.spacing(5),
+    height: theme.spacing(5),
     background: "#939592",
   },
   listItem: {
@@ -92,6 +103,8 @@ HideOnScroll.propTypes = {
 };
 
 const Navbar = (props) => {
+  const { state } = useContext(AppStateContext);
+  const { routeIndex, toolBarTitle } = state;
   const [open, setOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -106,7 +119,10 @@ const Navbar = (props) => {
 
   const sideList = () => (
     <Box className={classes.menuSliderContainer} component="div">
-      <Avatar className={classes.avatar} src={avatar} alt="Prince Mercado" />
+      {/* <Avatar className={classes.avatar} src={avatar} alt="Prince Mercado" /> */}
+      <Avatar className={classes.avatar} alt="Prince Mercado">
+        <ImageFadeIn src={avatar} height={108} style={{ objectFit: "fill" }} />
+      </Avatar>
       <Divider />
       <List>
         {menuItems.map((item, i) => (
@@ -137,17 +153,27 @@ const Navbar = (props) => {
             position="fixed"
             className={classes.appbar}
             style={{
-              background: selectedIndex == 0 ? "transparent" : "#3873B1",
+              background: routeIndex == 0 ? "transparent" : "#3873B1",
             }}
-            elevation={selectedIndex == 0 ? 0 : 1}
+            elevation={routeIndex == 0 ? 0 : 1}
           >
             <Toolbar>
               <IconButton onClick={() => setOpen(true)}>
                 <MenuRoundedIcon className={classes.menu} />
               </IconButton>
-              {/* <Typography variant="h5" className={classes.title}>
-                {menuItems[selectedIndex].listText}
-              </Typography> */}
+              <Typography variant="h5" className={classes.title}>
+                {toolBarTitle}
+              </Typography>
+              <div className={classes.grow} />
+              {routeIndex == 0 ? null : (
+                <Avatar className={classes.toolbarAvatar} alt="Prince Mercado">
+                  <ImageFadeIn
+                    src={avatar}
+                    height={40}
+                    style={{ objectFit: "fill" }}
+                  />
+                </Avatar>
+              )}
             </Toolbar>
           </AppBar>
         </HideOnScroll>
