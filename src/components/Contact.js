@@ -27,10 +27,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "1rem",
   },
   form: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    position: "absolute",
+    position: "relative",
+    margin: "1rem"
   },
   input: {
     color: "#fff",
@@ -43,6 +41,10 @@ const useStyles = makeStyles((theme) => ({
   field: {
     margin: "1rem 0rem",
   },
+  recaptcha:{
+    marginTop: "1rem",
+    width: "100%"
+  }
 }));
 
 const InputField = withStyles({
@@ -175,7 +177,7 @@ const Contact = () => {
           />
           <ReCAPTCHA
             ref={recaptchaRef}
-            style={{ marginTop: "1rem" }}
+            className={classes.recaptcha}
             sitekey="6Ld5nMYZAAAAAIxN9dbgWayMpQQaYAqG4ChKSFtF"
             onChange={() => setCaptchaPassed(true)}
           />
