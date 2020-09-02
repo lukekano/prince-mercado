@@ -15,7 +15,7 @@ import project2 from "../images/dltb-selectseat.png";
 import project3 from "../images/ctmo-dashboard.png";
 import project4 from "../images/ctmo-app-home2.png";
 import project5 from "../images/remote-home.png";
-import project6 from "../images/react.png";
+import project6 from "../images/fingerprint-app.png";
 import TitlebarGridList from "./TitleBarGridList";
 import ImageFadeIn from "react-image-fade-in";
 import { AppDispatchContext } from "../context/AppContext";
@@ -82,14 +82,14 @@ const projects = [
     iste alias sunt veritatis nisi dolores!`,
     img: project5,
   },
-  // {
-  //   title: "Face Recognition App",
-  //   author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-  //   consequatur magni quod nesciunt necessitatibus molestiae non\
-  //   eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-  //   iste alias sunt veritatis nisi dolores!`,
-  //   img: project6,
-  // },
+  {
+    title: "Fingerprint Web Integration",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    consequatur magni quod nesciunt necessitatibus molestiae non\
+    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
+    iste alias sunt veritatis nisi dolores!`,
+    img: project6,
+  },
 ];
 
 const Portfolio = () => {
