@@ -35,30 +35,47 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = () => {
-  const {dispatch} = useContext(AppDispatchContext);
+  const { dispatch } = useContext(AppDispatchContext);
   const [titleComplete, setTitleComplete] = useState(false);
+  const [isAvatarLoaded, setIsAvatarLoaded] = useState(false);
   const classes = useStyles();
 
-  useEffect(() =>{
-    dispatch({type: "navigate", payload: {routeIndex: 0, toolBarTitle: ""}})
+  useEffect(() => {
+    dispatch({
+      type: "navigate",
+      payload: { routeIndex: 0, toolBarTitle: "" },
+    });
   }, []);
 
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} alt="Prince Mercado"><ImageFadeIn
-                    src={avatar}
-                    height={160}
-                    style={{ objectFit: "fill" }}
-                  /></Avatar>
+        <Avatar className={classes.avatar} alt="Prince Mercado">
+          <ImageFadeIn
+            src={avatar}
+            height={160}
+            style={{ objectFit: "fill" }}
+            onLoad={() => setIsAvatarLoaded(true)}
+          />
+        </Avatar>
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed
+        {isAvatarLoaded ? (
+          <Typed
           strings={["Hi, I'm Prince Mercado"]}
           typeSpeed={100}
           showCursor={false}
           onComplete={() => setTitleComplete(true)}
         />
+        ) : (
+          <Typed
+          strings={["Hi, I'm Prince Mercado"]}
+          typeSpeed={100}
+          showCursor={false}
+          style={{ color: "transparent" }}
+          stopped
+        />
+        )}
       </Typography>
 
       <Typography className={classes.subtitle} variant="h5">
@@ -76,12 +93,10 @@ const Header = () => {
           />
         ) : (
           <Typed
-            strings={[
-              "Frontend Developer",
-            ]}
+            strings={["Frontend Developer"]}
             typeSpeed={40}
             backSpeed={50}
-            style={{color: "transparent"}}
+            style={{ color: "transparent" }}
             stopped
           />
         )}
