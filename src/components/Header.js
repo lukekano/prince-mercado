@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(20),
     margin: theme.spacing(1),
     background: "#939592",
+    boxShadow: theme.shadows[5],
   },
   title: {
     color: "#fff",

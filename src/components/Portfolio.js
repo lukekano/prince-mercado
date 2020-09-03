@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
@@ -10,7 +10,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-import project1 from "../images/gps-dashboard.jpg";
+import project1 from "../images/gps-dashboard.png";
 import project2 from "../images/dltb-selectseat.png";
 import project3 from "../images/ctmo-dashboard.png";
 import project4 from "../images/ctmo-app-home2.png";
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardContainer: {
     maxWidth: 345,
-    maxHeight: 300,
+    maxHeight: 400,
     margin: "3rem auto",
     background: "linear-gradient(to top, transparent,  #3873B1)",
     color: "#fff",
@@ -67,6 +67,14 @@ const projects = [
     img: project3,
   },
   {
+    title: "Fingerprint Web Integration",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    consequatur magni quod nesciunt necessitatibus molestiae non\
+    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
+    iste alias sunt veritatis nisi dolores!`,
+    img: project6,
+  },
+  {
     title: "Tricycle Complaint App",
     author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
     consequatur magni quod nesciunt necessitatibus molestiae non\
@@ -82,20 +90,15 @@ const projects = [
     iste alias sunt veritatis nisi dolores!`,
     img: project5,
   },
-  {
-    title: "Fingerprint Web Integration",
-    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
-    img: project6,
-  },
 ];
 
 const Portfolio = () => {
-  const {dispatch} = useContext(AppDispatchContext);
-  useEffect(() =>{
-    dispatch({type: "navigate", payload: {routeIndex: 2, toolBarTitle: "Portfolio"}})
+  const { dispatch } = useContext(AppDispatchContext);
+  useEffect(() => {
+    dispatch({
+      type: "navigate",
+      payload: { routeIndex: 2, toolBarTitle: "Portfolio" },
+    });
   }, []);
   const classes = useStyles();
   return (
@@ -114,7 +117,7 @@ const Portfolio = () => {
                   // style={{ objectFit: "fill" }}
                 >
                   <ImageFadeIn
-                    height={150}
+                    height={200}
                     src={project.img}
                     style={{ objectFit: "fill" }}
                   />
