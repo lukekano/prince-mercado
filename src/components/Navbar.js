@@ -59,7 +59,7 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     width: theme.spacing(5),
     height: theme.spacing(5),
-    background: "#939592",
+    background: "#ccc",
   },
   listItem: {
     color: "#ddd",
