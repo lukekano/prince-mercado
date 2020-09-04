@@ -1,8 +1,17 @@
-import React, {useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { AppDispatchContext } from "../context/AppContext";
+import csi from "../images/circuitsolutions.jpg";
+import amdocs from "../images/amdocs.jpg";
+import ImageFadeIn from "react-image-fade-in";
+import Avatar from "@material-ui/core/Avatar";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -77,6 +86,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#3873B1",
     lineHeight: 1,
     padding: "0.5rem 1rem",
+    borderRadius: "5px",
     "&:before": {
       display: "none",
     },
@@ -109,12 +119,54 @@ const useStyles = makeStyles((theme) => ({
     color: "#ddd",
     textAlign: "left",
   },
+  companyImage: {
+    width: theme.spacing(30),
+    height: theme.spacing(10),
+    margin: theme.spacing(1),
+    background: "#939592",
+    boxShadow: theme.shadows[5],
+  },
+  card: {
+    background: "linear-gradient(to top, transparent,  #3873B1)",
+  },
 }));
 
+const resume = [
+  {
+    position: "Software Developer",
+    company: "Circuit Solutions Inc.",
+    companyImage: csi,
+    year: "2017",
+    tasks: [
+      "Built modern applications with JAVA, Spring, Spring Boot,ReactJs, MySQL",
+      "Built Face Recognition REST API for web based applications",
+      "Integrated biometric scanners and hardwares to web based applications",
+      "Built android application for employee's remote timekeeping",
+      "Worked with other developers on building GPS and Bluetooth enabled mobile applications",
+      "Managed MySQL database installation, daily incremental backup and recovery",
+      "Written scripts to automate reports generation",
+    ],
+  },
+  {
+    position: "Software Developer",
+    company: "Amdocs",
+    companyImage: amdocs,
+    year: "2019",
+    tasks: [
+      "Provided support to production software",
+      "Analyzed and debugged microservice APIs and server issues",
+      "Built bulk user update jobs and scripts",
+    ],
+  },
+];
+
 const Resume = () => {
-  const {dispatch} = useContext(AppDispatchContext);
-  useEffect(() =>{
-    dispatch({type: "navigate", payload: {routeIndex: 1, toolBarTitle: "Resume"}})
+  const { dispatch } = useContext(AppDispatchContext);
+  useEffect(() => {
+    dispatch({
+      type: "navigate",
+      payload: { routeIndex: 1, toolBarTitle: "Resume" },
+    });
   }, []);
   const classes = useStyles();
   return (
@@ -123,85 +175,50 @@ const Resume = () => {
         Working Experience
       </Typography>
       <Box component="div" className={classes.timeLine}>
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2017
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Software Developer
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            Circuit Solutions Inc.
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            <ul>
-              <li>
-                Built modern applications with JAVA, Spring, Spring
-                Boot,ReactJs, MySQL
-              </li>
-              <li>Built Face Recognition API for web based applications</li>
-
-              <li>
-                Integrated biometric scanners and hardwares to web based
-                applications
-              </li>
-              <li>
-                Built android application for employee's remote timekeeping
-              </li>
-              <li>
-                Worked with other developers on building GPS and Bluetooth
-                enabled mobile applications
-              </li>
-              <li>
-                Managed and automate database backups of existing applications
-              </li>
-              <li>Written scripts to automate reports generation</li>
-            </ul>
-          </Typography>
-        </Box>
-
-        <Typography
-          variant="h2"
-          className={`${classes.timeLineYear} ${classes.timeLineItem}`}
-        >
-          2019
-        </Typography>
-        <Box component="div" className={classes.timeLineItem}>
-          <Typography
-            variant="h5"
-            align="center"
-            className={classes.subHeading}
-          >
-            Software Developer
-          </Typography>
-          <Typography variant="body1" align="center" className={classes.body1}>
-            Amdocs Philippines
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            align="center"
-            className={classes.subtitle1}
-          >
-            <ul>
-              <li>Provided support to production softwares</li>
-              <li>
-                Analyzed and debugged microservice API's and server issues
-              </li>
-              <li>Built bulk user update jobs and scripts</li>
-            </ul>
-          </Typography>
-        </Box>
+        {resume.map((work) => (
+          <React.Fragment>
+            <Typography
+              variant="h2"
+              className={`${classes.timeLineYear} ${classes.timeLineItem}`}
+            >
+              {work.year}
+            </Typography>
+            <Box component="div" className={classes.timeLineItem}>
+              <Card className={classes.card}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    alt="Contemplative Reptile"
+                    height="80"
+                    image={work.companyImage}
+                    style={{ objectFit: "contain", background: "#fff" }}
+                    title={`${work.position}`}
+                  />
+                  <CardContent>
+                    <Typography
+                      variant="h5"
+                      align="center"
+                      className={classes.subHeading}
+                    >
+                      {work.position}
+                    </Typography>
+                    <Typography
+                      variant="subtitle1"
+                      align="center"
+                      className={classes.subtitle1}
+                    >
+                      <ul>
+                        {work.tasks.map((task) => (
+                          <li>{task}</li>
+                        ))}
+                      </ul>
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Box>
+          </React.Fragment>
+        ))}
         <Typography
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
