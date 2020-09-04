@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
   },
   timeLine: {
     position: "relative",
-    padding: "1rem",
+    padding: "1rem 0 1rem 0",
     margin: "0 auto",
     "&:before": {
       content: "''",
       position: "absolute",
       height: "100%",
       border: "1px solid #fff",
-      right: "40px",
+      right: "20px",
       top: 0,
     },
     "&:after": {
@@ -43,7 +43,6 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   timeLineItem: {
-    padding: "1rem",
     borderBottom: "2px solid #fff",
     position: "relative",
     margin: "1rem 3rem 1rem 1rem",
@@ -55,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     "&:before": {
       content: "''",
       position: "absolute",
-      right: "-0.625rem",
+      right: "-1rem",
       top: "calc(50% - 5px)",
       borderStyle: "solid",
       borderColor: "#3873B1 #3873B1 transparent transparent",
@@ -72,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
       },
       "&:nth-of-type(2n):before": {
         right: "auto",
-        left: "-0.625rem",
+        left: "-1rem",
         borderColor: "transparent transparent #3873B1 #3873B1",
       },
     },
@@ -104,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
   },
   heading: {
     color: "#3873B1",
-    padding: "3rem 0",
+    padding: "3rem 0 1rem 0",
     textTransform: "uppercase",
   },
   subHeading: {
@@ -118,13 +117,6 @@ const useStyles = makeStyles((theme) => ({
   subtitle1: {
     color: "#ddd",
     textAlign: "left",
-  },
-  companyImage: {
-    width: theme.spacing(30),
-    height: theme.spacing(10),
-    margin: theme.spacing(1),
-    background: "#939592",
-    boxShadow: theme.shadows[5],
   },
   card: {
     background: "linear-gradient(to top, transparent,  #3873B1)",

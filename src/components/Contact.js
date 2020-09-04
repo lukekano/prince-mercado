@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     position: "relative",
-    margin: "1rem",
+    margin: "0 1rem",
   },
   input: {
     color: "#fff",

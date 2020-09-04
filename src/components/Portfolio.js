@@ -104,9 +104,9 @@ const Portfolio = () => {
   return (
     <Box component="div" className={classes.mainContainer}>
       {/* <TitlebarGridList tileData={projects}/> */}
-      <Grid container justify="left">
+      <Grid container justify="center">
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={4} key={i}>
+          <Grid item xs={12} sm={6} md={4} key={i}>
             <Card className={classes.cardContainer}>
               <CardActionArea>
                 <CardMedia
