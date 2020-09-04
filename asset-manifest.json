@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.d5527328.chunk.css",
-    "main.js": "/static/js/main.a8225966.chunk.js",
+    "main.css": "/static/css/main.cf66b3df.chunk.css",
+    "main.js": "/static/js/main.0373c014.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.6632df9f.chunk.js": "/static/js/2.6632df9f.chunk.js",
+    "static/js/2.807972f1.chunk.js": "/static/js/2.807972f1.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.c010160eba839cb1da3423c6fbf56b78.js": "/precache-manifest.c010160eba839cb1da3423c6fbf56b78.js",
+    "precache-manifest.99be2f72d4e81712f3cd6551025bf0cf.js": "/precache-manifest.99be2f72d4e81712f3cd6551025bf0cf.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.6632df9f.chunk.js.LICENSE.txt": "/static/js/2.6632df9f.chunk.js.LICENSE.txt",
+    "static/js/2.807972f1.chunk.js.LICENSE.txt": "/static/js/2.807972f1.chunk.js.LICENSE.txt",
+    "static/media/amdocs.jpg": "/static/media/amdocs.8c8c0201.jpg",
     "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
+    "static/media/circuitsolutions.jpg": "/static/media/circuitsolutions.dbfcab22.jpg",
     "static/media/App.css": "/static/media/coding2.1bf79fee.jpg",
     "static/media/ctmo-app-home2.png": "/static/media/ctmo-app-home2.53ac1c69.png",
     "static/media/ctmo-dashboard.png": "/static/media/ctmo-dashboard.561745a2.png",
@@ -19,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.6632df9f.chunk.js",
-    "static/css/main.d5527328.chunk.css",
-    "static/js/main.a8225966.chunk.js"
+    "static/js/2.807972f1.chunk.js",
+    "static/css/main.cf66b3df.chunk.css",
+    "static/js/main.0373c014.chunk.js"
   ]
 }
