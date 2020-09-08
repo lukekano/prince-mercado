@@ -6,6 +6,7 @@ import Facebook from "@material-ui/icons/Facebook";
 import Twitter from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 const useStyles = makeStyles({
   bottomNavContainer: {
@@ -27,19 +28,26 @@ const Footer = () => {
   return (
     <BottomNavigation className={classes.bottomNavContainer}>
       <BottomNavigationAction
-        onClick={() =>
-          window.open("https://www.facebook.com/lukekanopol", "_blank")
+        onClick={() =>{
+          window.open("https://www.facebook.com/lukekanopol", "_blank");
+          ReactGA.event({
+            category: 'Drawer',
+            action: 'Clicked Facebook Icon',
+          });
+        }
         }
         icon={<Facebook />}
         className={classes.root}
       />
       {/* <BottomNavigationAction icon={<Twitter />} className={classes.root} /> */}
       <BottomNavigationAction
-        onClick={() =>
-          window.open(
-            "https://www.linkedin.com/in/prince-luke-mercado-17454a11b",
-            "_blank"
-          )
+        onClick={() => {
+          window.open("https://www.linkedin.com/in/prince-luke-mercado-17454a11b","_blank");
+          ReactGA.event({
+            category: 'Drawer',
+            action: 'Clicked LinkedIn Icon',
+          });
+        }
         }
         icon={<LinkedInIcon />}
         className={classes.root}

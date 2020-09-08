@@ -17,6 +17,9 @@ import { AppStateContext, AppDispatchContext } from "./context/AppContext";
 import "./App.css";
 
 import { useImmerReducer } from "use-immer";
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-177448857-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const font = "Titillium Web, sans-serif";
 
@@ -44,6 +47,7 @@ function appReducer(draft, action) {
     case "navigate":
       draft.routeIndex = action.payload.routeIndex;
       draft.toolBarTitle = action.payload.toolBarTitle;
+      ReactGA.pageview(`/${action.payload.toolBarTitle}`);
       return;
     default:
       return;
