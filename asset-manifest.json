@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.cf66b3df.chunk.css",
-    "main.js": "/static/js/main.bd9296ca.chunk.js",
+    "main.js": "/static/js/main.fdd23e83.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.807972f1.chunk.js": "/static/js/2.807972f1.chunk.js",
+    "static/js/2.e65be408.chunk.js": "/static/js/2.e65be408.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.d3ce23c64c8d4ea564588d8915abeab6.js": "/precache-manifest.d3ce23c64c8d4ea564588d8915abeab6.js",
+    "precache-manifest.93b351e23417a796847a78cb17e7e7d4.js": "/precache-manifest.93b351e23417a796847a78cb17e7e7d4.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.807972f1.chunk.js.LICENSE.txt": "/static/js/2.807972f1.chunk.js.LICENSE.txt",
+    "static/js/2.e65be408.chunk.js.LICENSE.txt": "/static/js/2.e65be408.chunk.js.LICENSE.txt",
     "static/media/amdocs.jpg": "/static/media/amdocs.8c8c0201.jpg",
     "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
     "static/media/circuitsolutions.jpg": "/static/media/circuitsolutions.dbfcab22.jpg",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.807972f1.chunk.js",
+    "static/js/2.e65be408.chunk.js",
     "static/css/main.cf66b3df.chunk.css",
-    "static/js/main.bd9296ca.chunk.js"
+    "static/js/main.fdd23e83.chunk.js"
   ]
 }
