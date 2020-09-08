@@ -64,10 +64,9 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     color: "#ddd",
-    "&.Mui-selected": {
-      color: "#fff",
-      backgroundColor: "#3873B1"
-    }
+    "&.MuiListItem-button:hover,&.Mui-selected": {
+      backgroundColor: "#3873B122",
+    },
   },
 }));
 
