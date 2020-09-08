@@ -164,7 +164,7 @@ const Resume = () => {
   return (
     <Box component="header" className={classes.mainContainer}>
       <Typography variant="h4" align="center" className={classes.heading}>
-        Working Experience
+        3 Years Working Experience
       </Typography>
       <Box component="div" className={classes.timeLine}>
         {resume.map((work) => (

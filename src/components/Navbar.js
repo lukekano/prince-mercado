@@ -27,6 +27,7 @@ import Footer from "../components/Footer";
 
 import Slide from "@material-ui/core/Slide";
 import { AppStateContext } from "../context/AppContext";
+import { AppDispatchContext } from "../context/AppContext";
 import ImageFadeIn from "react-image-fade-in";
 
 const useStyles = makeStyles((theme) => ({
@@ -63,6 +64,10 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     color: "#ddd",
+    "&.Mui-selected": {
+      color: "#fff",
+      backgroundColor: "#3873B1"
+    }
   },
 }));
 
@@ -104,14 +109,18 @@ HideOnScroll.propTypes = {
 
 const Navbar = (props) => {
   const { state } = useContext(AppStateContext);
+  const { dispatch } = useContext(AppDispatchContext);
   const { routeIndex, toolBarTitle } = state;
   const [open, setOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const classes = useStyles();
 
-  const handleDrawerItemClick = (event, index) => {
-    setSelectedIndex(index);
+  const handleDrawerItemClick = (index) => {
+    dispatch({
+      type: "navigate",
+      payload: { routeIndex: index, toolBarTitle: menuItems[index].listText },
+    });
     setTimeout(() => {
       setOpen(false);
     }, 200);
@@ -130,8 +139,8 @@ const Navbar = (props) => {
             button
             key={i}
             className={classes.listItem}
-            onClick={(event) => handleDrawerItemClick(event, i)}
-            selected={selectedIndex === i}
+            onClick={(event) => handleDrawerItemClick(i)}
+            selected={routeIndex === i}
             component={Link}
             to={item.listPath}
           >
