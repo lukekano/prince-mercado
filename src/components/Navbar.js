@@ -16,7 +16,6 @@ import Home from "@material-ui/icons/Home";
 import ContactMail from "@material-ui/icons/ContactMail";
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
-import MenuIcon from "@material-ui/icons/Menu";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
@@ -55,13 +54,13 @@ const useStyles = makeStyles((theme) => ({
     margin: "2rem auto",
     width: theme.spacing(13),
     height: theme.spacing(13),
-    background: "#939592",
+    background: "linear-gradient(to top, transparent,  #3873B1)",
   },
   toolbarAvatar: {
     display: "block",
     width: theme.spacing(5),
     height: theme.spacing(5),
-    background: "#ccc",
+    background: "linear-gradient(to top, transparent,  #3873B1)",
   },
   listItem: {
     color: "#ddd",
@@ -112,7 +111,6 @@ const Navbar = (props) => {
   const { dispatch } = useContext(AppDispatchContext);
   const { routeIndex, toolBarTitle } = state;
   const [open, setOpen] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const classes = useStyles();
 

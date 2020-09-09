@@ -42,7 +42,7 @@ const Footer = () => {
       {/* <BottomNavigationAction icon={<Twitter />} className={classes.root} /> */}
       <BottomNavigationAction
         onClick={() => {
-          window.open("https://www.linkedin.com/in/prince-luke-mercado-17454a11b","_blank");
+          window.open("https://www.linkedin.com/in/princemercado","_blank");
           ReactGA.event({
             category: 'Drawer',
             action: 'Clicked LinkedIn Icon',

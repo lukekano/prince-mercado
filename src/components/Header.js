@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(20),
     height: theme.spacing(20),
     margin: theme.spacing(1),
-    background: "#939592",
+    background: "linear-gradient(to top, transparent,  #3873B1)",
     boxShadow: theme.shadows[5],
   },
   title: {
