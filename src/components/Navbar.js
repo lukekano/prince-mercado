@@ -65,7 +65,8 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     color: "#ddd",
     "&.MuiListItem-button:hover,&.Mui-selected": {
-      backgroundColor: "#3873B122",
+      background: "linear-gradient(to right, #3873B166 ,transparent)",
+      // backgroundColor: "#3873B122",
     },
   },
 }));
