@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.cf66b3df.chunk.css",
-    "main.js": "/static/js/main.05b6c466.chunk.js",
+    "main.js": "/static/js/main.58e1ea56.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.bf99360f.chunk.js": "/static/js/2.bf99360f.chunk.js",
+    "static/js/2.d1c0bcbb.chunk.js": "/static/js/2.d1c0bcbb.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.7e35c21236e684e48124c8bd99f3ffad.js": "/precache-manifest.7e35c21236e684e48124c8bd99f3ffad.js",
+    "precache-manifest.a0bad77ca52ae6b7e229bcaf4d3db5e2.js": "/precache-manifest.a0bad77ca52ae6b7e229bcaf4d3db5e2.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.bf99360f.chunk.js.LICENSE.txt": "/static/js/2.bf99360f.chunk.js.LICENSE.txt",
+    "static/js/2.d1c0bcbb.chunk.js.LICENSE.txt": "/static/js/2.d1c0bcbb.chunk.js.LICENSE.txt",
     "static/media/amdocs.jpg": "/static/media/amdocs.8c8c0201.jpg",
     "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
     "static/media/circuitsolutions.jpg": "/static/media/circuitsolutions.dbfcab22.jpg",
@@ -17,12 +17,13 @@
     "static/media/dltb-selectseat.png": "/static/media/dltb-selectseat.53d6d607.png",
     "static/media/fingerprint-app.png": "/static/media/fingerprint-app.b8f7ef55.png",
     "static/media/gps-dashboard.png": "/static/media/gps-dashboard.4630160a.png",
-    "static/media/remote-home.png": "/static/media/remote-home.b7957a15.png"
+    "static/media/remote-home.png": "/static/media/remote-home.b7957a15.png",
+    "static/media/smart-home.png": "/static/media/smart-home.45f7cc27.png"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.bf99360f.chunk.js",
+    "static/js/2.d1c0bcbb.chunk.js",
     "static/css/main.cf66b3df.chunk.css",
-    "static/js/main.05b6c466.chunk.js"
+    "static/js/main.58e1ea56.chunk.js"
   ]
 }
