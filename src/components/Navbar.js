@@ -29,7 +29,6 @@ import { AppStateContext } from "../context/AppContext";
 import { AppDispatchContext } from "../context/AppContext";
 import ImageFadeIn from "react-image-fade-in";
 
-
 const useStyles = makeStyles((theme) => ({
   appbar: {
     background: "3873B1",
