@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f05745ef4f7149e7a5e5b6d36166c87",
+    "revision": "26e2362997e3bf68b7c5ee66e4cff18a",
     "url": "/index.html"
   },
   {
-    "revision": "cb67914e9fe17ac02463",
+    "revision": "1220af12539106cc9d54",
     "url": "/static/css/main.cf66b3df.chunk.css"
   },
   {
-    "revision": "4dcc794df712c54f431e",
-    "url": "/static/js/2.d1c0bcbb.chunk.js"
+    "revision": "31d3d80be6cea12a6877",
+    "url": "/static/js/2.94505061.chunk.js"
   },
   {
     "revision": "84f48c9a090ba2f8cc4a11e48dd3dad0",
-    "url": "/static/js/2.d1c0bcbb.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.94505061.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cb67914e9fe17ac02463",
-    "url": "/static/js/main.58e1ea56.chunk.js"
+    "revision": "1220af12539106cc9d54",
+    "url": "/static/js/main.ce07844f.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -66,5 +66,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "45f7cc271aedffbfa27364479aa55e33",
     "url": "/static/media/smart-home.45f7cc27.png"
+  },
+  {
+    "revision": "b53dd8a03021c86b763a5fce1717c958",
+    "url": "/static/media/vpn-rewards.b53dd8a0.png"
   }
 ]);
