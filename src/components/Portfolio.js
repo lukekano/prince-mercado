@@ -17,6 +17,7 @@ import project4 from "../images/ctmo-app-home2.png";
 import project5 from "../images/remote-home.png";
 import project6 from "../images/fingerprint-app.png";
 import project7 from "../images/smart-home.png";
+import project8 from "../images/vpn-rewards.png";
 import ImageFadeIn from "react-image-fade-in";
 import { AppDispatchContext } from "../context/AppContext";
 
@@ -97,6 +98,14 @@ const projects = [
     eligendi, magnam est aliquam recusandae? Magnam soluta minus\
     iste alias sunt veritatis nisi dolores!`,
     img: project7,
+  },
+  {
+    title: "VPN Rewards App",
+    author: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
+    consequatur magni quod nesciunt necessitatibus molestiae non\
+    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
+    iste alias sunt veritatis nisi dolores!`,
+    img: project8,
   },
 ];
 
