@@ -126,9 +126,20 @@ const useStyles = makeStyles((theme) => ({
 const resume = [
   {
     position: "Software Developer",
+    company: "Amdocs",
+    companyImage: amdocs,
+    year: "2020",
+    tasks: [
+      "Provided support to production software",
+      "Analyzed and debugged microservice APIs and server issues",
+      "Built bulk user update jobs and scripts",
+    ],
+  },
+  {
+    position: "Software Developer",
     company: "Circuit Solutions Inc.",
     companyImage: csi,
-    year: "2017",
+    year: "2019",
     tasks: [
       "Built modern applications with JAVA, Spring, Spring Boot,ReactJs, MySQL",
       "Built Face Recognition REST API for web based applications",
@@ -137,17 +148,6 @@ const resume = [
       "Worked with other developers on building GPS and Bluetooth enabled mobile applications",
       "Managed MySQL database installation, daily incremental backup and recovery",
       "Written scripts to automate reports generation",
-    ],
-  },
-  {
-    position: "Software Developer",
-    company: "Amdocs",
-    companyImage: amdocs,
-    year: "2019",
-    tasks: [
-      "Provided support to production software",
-      "Analyzed and debugged microservice APIs and server issues",
-      "Built bulk user update jobs and scripts",
     ],
   },
 ];
@@ -215,7 +215,7 @@ const Resume = () => {
           variant="h2"
           className={`${classes.timeLineYear} ${classes.timeLineItem}`}
         >
-          2020
+          2017
         </Typography>
       </Box>
     </Box>
