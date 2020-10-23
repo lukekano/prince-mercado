@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.cf66b3df.chunk.css",
-    "main.js": "/static/js/main.64563696.chunk.js",
+    "main.js": "/static/js/main.2ac78a92.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.94505061.chunk.js": "/static/js/2.94505061.chunk.js",
+    "static/js/2.63b02e5e.chunk.js": "/static/js/2.63b02e5e.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.a42fcbe06acc309200ef3a424772e520.js": "/precache-manifest.a42fcbe06acc309200ef3a424772e520.js",
+    "precache-manifest.72fce06cc7bfbcb45cf4837f4067e098.js": "/precache-manifest.72fce06cc7bfbcb45cf4837f4067e098.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.94505061.chunk.js.LICENSE.txt": "/static/js/2.94505061.chunk.js.LICENSE.txt",
+    "static/js/2.63b02e5e.chunk.js.LICENSE.txt": "/static/js/2.63b02e5e.chunk.js.LICENSE.txt",
     "static/media/amdocs.jpg": "/static/media/amdocs.8c8c0201.jpg",
     "static/media/avatar.png": "/static/media/avatar.4f5142ce.png",
     "static/media/circuitsolutions.jpg": "/static/media/circuitsolutions.dbfcab22.jpg",
@@ -19,12 +19,12 @@
     "static/media/gps-dashboard.png": "/static/media/gps-dashboard.4630160a.png",
     "static/media/remote-home.png": "/static/media/remote-home.b7957a15.png",
     "static/media/smart-home.png": "/static/media/smart-home.45f7cc27.png",
-    "static/media/vpn-rewards.png": "/static/media/vpn-rewards.b53dd8a0.png"
+    "static/media/vpn-rewards2.png": "/static/media/vpn-rewards2.01cca06a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.94505061.chunk.js",
+    "static/js/2.63b02e5e.chunk.js",
     "static/css/main.cf66b3df.chunk.css",
-    "static/js/main.64563696.chunk.js"
+    "static/js/main.2ac78a92.chunk.js"
   ]
 }
