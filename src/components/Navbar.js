@@ -21,6 +21,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import Typography from "@material-ui/core/Typography";
+import GetAppIcon from '@material-ui/icons/GetApp';
 
 import Footer from "../components/Footer";
 

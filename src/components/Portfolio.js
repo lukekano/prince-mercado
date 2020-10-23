@@ -17,7 +17,7 @@ import project4 from "../images/ctmo-app-home2.png";
 import project5 from "../images/remote-home.png";
 import project6 from "../images/fingerprint-app.png";
 import project7 from "../images/smart-home.png";
-import project8 from "../images/vpn-rewards.png";
+import project8 from "../images/vpn-rewards2.png";
 import ImageFadeIn from "react-image-fade-in";
 import { AppDispatchContext } from "../context/AppContext";
 
